@@ -26,5 +26,12 @@ public class CarsHandler : MonoBehaviour
 
             transform.position += new Vector3(direction * CarSpeed * Time.deltaTime, 0, 0); 
         }
-    
+    void OnCollisionEnter2D(Collision2D collision)
+
+    {
+        if (collision.gameObject.CompareTag("Car"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

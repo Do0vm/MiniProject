@@ -37,5 +37,12 @@ public class Spawer : MonoBehaviour
         Instantiate(objectPrefab, transform.position, Quaternion.identity);
 
     }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 0.5f);
+    }
+
+
 }
 

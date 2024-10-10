@@ -37,5 +37,11 @@ public class LilySpawer : MonoBehaviour
         Instantiate(Lily, transform.position, Quaternion.identity);
 
     }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 0.5f);
+    }
+
 }
 

@@ -24,7 +24,17 @@ public class LilyHandler : MonoBehaviour
 
            
 
-            transform.position += new Vector3(Lilydirection * LilySpeed * Time.deltaTime, 0, 0); 
+            transform.position += new Vector3(Lilydirection * LilySpeed * Time.deltaTime, 0, 0);
+            
+
         }
-    
+               void OnCollisionEnter2D (Collision2D collision)
+
+            {
+                if (collision.gameObject.CompareTag("Lily"))
+                {
+                    Destroy(gameObject);
+                }
+            }
+
 }
